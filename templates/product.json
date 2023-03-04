@@ -1,0 +1,26 @@
+{
+    "sections": {
+      "product-template": {
+        "type": "template-product",
+        "blocks": {
+          "block-main-item": {
+            "type": "block-main-item"
+          },
+          "block-features": {
+            "type": "block-features"
+          },
+          "block-images": {
+            "type": "block-images"
+          }
+        },
+        "block_order": [
+          "block-main-item",
+          "block-features",
+          "block-images"
+        ]
+      }
+    },
+    "order":[
+        "product-template"
+    ]
+}

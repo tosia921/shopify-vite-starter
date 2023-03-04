@@ -1,0 +1,40 @@
+<header class="header">
+  <header-component>
+    <div class="header__wrapper">
+      <div class="header__logo">
+
+        <div class="hamburger-button">
+          {% render 'hamburger-icon' %}
+        </div>
+        <a href="/">
+          {{ shop.name }}
+        </a>
+      </div>
+      <ul class="header-menu">
+        {% for link in linklists.main-menu.links -%}
+          <li class="header-menu--item">{{ link.title | link_to: link.url }}</li>
+        {%- endfor %}
+      </ul>
+      <div class="cart-icon-parent">
+        <a href="{{routes.cart_url}}">
+          {% render 'cart-icon' %}
+
+          {% if cart.item_count > 0 %}
+            <div class="cart-icon-count">
+              <span>{{ cart.item_count }}</span>
+            </div>
+          {% else %}
+          <div class="cart-icon-count">
+              <span>0</span>
+            </div>
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </header-component>
+</header>
+
+{% liquid
+      render 'vite-tag' with '@/styles/sections/header.scss'
+      render 'vite-tag' with '@/js/header.js'
+%}

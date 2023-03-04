@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "template": {
+      "type": "template-collection"
+    },
+    "section-nav": {
+      "type": "section-nav",
+      "blocks": {
+        "section-nav-item": {
+          "type": "section-nav-item",
+          "settings": {
+            "block_title": "HEADPHONES"
+          }
+        },
+        "section-nav-item-2": {
+          "type": "section-nav-item",
+          "settings": {
+            "block_title": "SPEAKERS"
+          }
+        },
+        "section-nav-item-3": {
+          "type": "section-nav-item",
+          "settings": {
+            "block_title": "EARPHONES"
+          }
+        }
+      },
+      "block_order": [
+        "section-nav-item",
+        "section-nav-item-2",
+        "section-nav-item-3"
+      ]
+    }
+  },
+  "order": ["template", "section-nav"]
+}

@@ -1,0 +1,120 @@
+{
+  "_iziToast-385631db.js": {
+    "file": "iziToast-385631db.js"
+  },
+  "src/js/addToCartButton.js": {
+    "file": "addToCartButton-8fecdf41.js",
+    "imports": [
+      "_iziToast-385631db.js"
+    ],
+    "isEntry": true,
+    "src": "src/js/addToCartButton.js"
+  },
+  "src/js/cart.js": {
+    "file": "cart-5ea7ff26.js",
+    "imports": [
+      "_iziToast-385631db.js",
+      "src/js/formatMoney.js"
+    ],
+    "isEntry": true,
+    "src": "src/js/cart.js"
+  },
+  "src/js/formatMoney.js": {
+    "file": "formatMoney-7b8119d5.js",
+    "isEntry": true,
+    "src": "src/js/formatMoney.js"
+  },
+  "src/js/header.js": {
+    "file": "header-e6193a06.js",
+    "isEntry": true,
+    "src": "src/js/header.js"
+  },
+  "src/js/productCarousel.js": {
+    "file": "productCarousel-eeb132a0.js",
+    "imports": [
+      "_iziToast-385631db.js"
+    ],
+    "isEntry": true,
+    "src": "src/js/productCarousel.js"
+  },
+  "src/styles/base/buttons.scss": {
+    "file": "buttons-878a04be.css",
+    "isEntry": true,
+    "src": "src/styles/base/buttons.scss"
+  },
+  "src/styles/base/global.scss": {
+    "file": "global-f7da4bf7.css",
+    "isEntry": true,
+    "src": "src/styles/base/global.scss"
+  },
+  "src/styles/base/typography.scss": {
+    "file": "typography-e3084b0b.css",
+    "isEntry": true,
+    "src": "src/styles/base/typography.scss"
+  },
+  "src/styles/base/variables.scss": {
+    "file": "variables-1f5b12bf.css",
+    "isEntry": true,
+    "src": "src/styles/base/variables.scss"
+  },
+  "src/styles/sections/carousel-once.scss": {
+    "file": "carousel-once-4ed993c7.js",
+    "isEntry": true,
+    "src": "src/styles/sections/carousel-once.scss"
+  },
+  "src/styles/sections/cart.scss": {
+    "file": "cart-d0104640.css",
+    "isEntry": true,
+    "src": "src/styles/sections/cart.scss"
+  },
+  "src/styles/sections/footer.scss": {
+    "file": "footer-d54a1921.css",
+    "isEntry": true,
+    "src": "src/styles/sections/footer.scss"
+  },
+  "src/styles/sections/header.scss": {
+    "file": "header-8ecca5b1.css",
+    "isEntry": true,
+    "src": "src/styles/sections/header.scss"
+  },
+  "src/styles/sections/hero-section.scss": {
+    "file": "hero-section-84af67fa.css",
+    "isEntry": true,
+    "src": "src/styles/sections/hero-section.scss"
+  },
+  "src/styles/sections/loading_spinner.scss": {
+    "file": "loading_spinner-5a2d54ec.css",
+    "isEntry": true,
+    "src": "src/styles/sections/loading_spinner.scss"
+  },
+  "src/styles/sections/product-card.scss": {
+    "file": "product-card-31485e77.css",
+    "isEntry": true,
+    "src": "src/styles/sections/product-card.scss"
+  },
+  "src/styles/sections/product-carousel.scss": {
+    "file": "product-carousel-39f52aaf.css",
+    "isEntry": true,
+    "src": "src/styles/sections/product-carousel.scss"
+  },
+  "src/styles/sections/section-grid.scss": {
+    "file": "section-grid-c70f6f39.css",
+    "isEntry": true,
+    "src": "src/styles/sections/section-grid.scss"
+  },
+  "src/styles/sections/section-nav.scss": {
+    "file": "section-nav-3fdae5cb.css",
+    "isEntry": true,
+    "src": "src/styles/sections/section-nav.scss"
+  },
+  "src/styles/sections/template-collection.scss": {
+    "file": "template-collection-c166258f.css",
+    "isEntry": true,
+    "src": "src/styles/sections/template-collection.scss"
+  },
+  "src/styles/sections/template-product.scss": {
+    "file": "template-product-2e90253d.css",
+    "isEntry": true,
+    "src": "src/styles/sections/template-product.scss"
+  }
+}

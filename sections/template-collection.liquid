@@ -1,0 +1,38 @@
+<div class="template-collection">
+
+  {% paginate collection.products by section.settings.number_of_products_per_page %}
+    <div class="template-collection__header">
+      <div class="border-top"></div>
+      <h1 class="">{{ collection.title }}</h1>
+    </div>
+    <div class="template-collection__items">
+      <div class="">
+        {% for product in collection.products %}
+          {% render 'product-card', product_product: product, collection_title: collection.title %}
+        {% else %}
+          <p>There are no products inside of this collection</p>
+        {% endfor %}
+      </div>
+    </div>
+    {% render "pagination", pagination: paginate %}
+  {% endpaginate %}
+</div>
+
+{% liquid
+      render 'vite-tag' with '@/styles/sections/template-collection.scss'
+%}
+
+{% schema %}
+  {
+    "name": "Template Collection",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "number",
+        "id": "number_of_products_per_page",
+        "default": 6,
+        "label": "Number of products per page"
+      }
+    ]
+  }
+{% endschema %}
