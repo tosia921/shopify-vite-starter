@@ -1,6 +1,6 @@
 import axios from 'axios';
+import iziToast from 'iziToast';
 import formatMoney from './formatMoney';
-import iziToast from 'iziToast'
 
 class Cart extends HTMLElement {
   constructor() {
@@ -27,14 +27,13 @@ class Cart extends HTMLElement {
   updateCartIconQuanity(quanity) {}
 
   removeItem() {
-
-    const spinnerIcon = this.querySelector('.lds-ring')
+    const spinnerIcon = this.querySelector('.lds-ring');
     const addToCartButton = document.querySelector('.remove');
-    const buttonText = this.querySelector('.remove span')
+    const buttonText = this.querySelector('.remove span');
 
-    addToCartButton.style.pointerEvents = "none";
-    spinnerIcon.style.display = "inline-block"
-    buttonText.style.display = "none"
+    addToCartButton.style.pointerEvents = 'none';
+    spinnerIcon.style.display = 'inline-block';
+    buttonText.style.display = 'none';
 
     const item = this.closest('.item');
     const key = item.getAttribute('data-itemid');
@@ -49,7 +48,7 @@ class Cart extends HTMLElement {
           document.querySelector('.cart-content').remove();
 
           const html = document.createElement('div');
-          html.innerHTML = `<div class="cart__empty"><h3>Your Cart is empty</h3></div>`;
+          html.innerHTML = '<div class="cart__empty"><h3>Your Cart is empty</h3></div>';
 
           document.querySelector('.cart').appendChild(html);
 
@@ -57,15 +56,12 @@ class Cart extends HTMLElement {
           cartIconCount.innerHTML = res.data.item_count;
 
           iziToast.show({
-            title: `Item removed from the cart`,
-            color: '#ff6863'
-        });
-
+            title: 'Item removed from the cart',
+            color: '#ff6863',
+          });
         } else {
           console.log(res.data);
-          const format = document
-            .querySelector('[data-money-format]')
-            .getAttribute(['data-money-format']);
+          const format = document.querySelector('[data-money-format]').getAttribute(['data-money-format']);
           const totalPrice = formatMoney(res.data.total_price, format);
 
           document.querySelector('.total_price').textContent = totalPrice;
@@ -76,9 +72,9 @@ class Cart extends HTMLElement {
           cartIconCount.innerHTML = res.data.item_count;
 
           iziToast.show({
-            title: `Item removed from the cart`,
-            color: '#ff6863'
-        });
+            title: 'Item removed from the cart',
+            color: '#ff6863',
+          });
         }
       });
   }
@@ -93,24 +89,19 @@ class Cart extends HTMLElement {
     console.log(key);
 
     function changeItemQuanity(key, quantity) {
-
       axios
         .post('/cart/change.js', {
           id: key,
           quantity,
         })
         .then((res) => {
-          const format = document
-            .querySelector('[data-money-format]')
-            .getAttribute(['data-money-format']);
+          const format = document.querySelector('[data-money-format]').getAttribute(['data-money-format']);
           const totalPrice = formatMoney(res.data.total_price, format);
           const item = res.data.items.find((item) => item.key === key);
           const itemPrice = formatMoney(item.final_line_price, format);
           console.log(itemPrice);
           document.querySelector('.total_price').textContent = totalPrice;
-          document.querySelector(
-            `[data-itemid="${key}"] .item_price`
-          ).textContent = itemPrice;
+          document.querySelector(`[data-itemid="${key}"] .item_price`).textContent = itemPrice;
 
           const cartIconCount = document.querySelector('.cart-icon-count span');
           cartIconCount.innerHTML = res.data.item_count;

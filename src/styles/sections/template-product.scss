@@ -59,34 +59,36 @@
       }
     }
   }
- 
 }
- .block-images {
-    margin: 50px 0;
-    display: grid;
-    grid-template-columns: 1fr 1.6fr; 
-    grid-template-rows: 300px 300px; 
-    gap: 25px 25px; 
-    grid-template-areas: 
-      "one three"
-      "two three"; 
-    .three { grid-area: three; }
-    .one { grid-area: one; }
-    .two { grid-area: two; }
+.block-images {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  grid-template-rows: 300px 300px;
+  gap: 25px 25px;
+  grid-template-areas:
+    "one three"
+    "two three";
+  .three {
+    grid-area: three;
+  }
+  .one {
+    grid-area: one;
+  }
+  .two {
+    grid-area: two;
+  }
 
-    .one, .two, .three {
- 
-        border-radius: 25px;
-        overflow: hidden;
-    
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        
-      }
+  .one,
+  .two,
+  .three {
+    border-radius: 25px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
+  }
 }
-
-    
-  

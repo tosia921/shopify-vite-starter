@@ -7,13 +7,28 @@
     "dev": "run-p vite theme-cli",
     "vite": "vite dev",
     "theme-cli": "shopify theme dev --store https://hydrogen-test-tomek.myshopify.com/",
-    "build": "vite build"
+    "build": "vite build",
+    "lint:formatting": "npx eslint --fix src/js/**",
+    "lint:style": "npx prettier --write .",
+    "lint": "run-p lint:style lint:formatting"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint"
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.4",
+    "pretty-quick": "^3.1.3",
     "sass": "^1.58.3",
     "vite": "^4.1.4",
     "vite-plugin-shopify": "^1.0.1"

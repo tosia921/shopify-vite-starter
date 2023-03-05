@@ -1,0 +1,13 @@
+node_modules
+assets
+config
+layout
+locales
+snippets
+templates
+.eslitrrc
+.gitignore
+vite.config.js
+package-lock.json
+package.json
+README.md
