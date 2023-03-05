@@ -19,12 +19,6 @@ class addToCartButton extends HTMLElement {
   }
 
   addToCart() {
-
-
-    
-
-
-    
     const spinnerIcon = this.querySelector('.lds-ring');
     const CartButton = document.querySelector('.js-add-to-cart');
     const buttonText = this.querySelector('.js-add-to-cart span');

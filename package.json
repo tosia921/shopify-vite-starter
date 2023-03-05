@@ -10,19 +10,12 @@
     "build": "vite build",
     "lint:formatting": "npx eslint --fix src/js/**",
     "lint:style": "npx prettier --write .",
-    "lint": "run-p lint:style lint:formatting"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "lint": "run-p lint:style lint:formatting",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,css,scss}": [
-      "npx eslint --fix",
-      "npx prettier --write",
-      "git add"
-    ]
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,scss,md}": "prettier --write"
   },
   "keywords": [],
   "author": "",
