@@ -9,6 +9,7 @@ class addToCartButton extends HTMLElement {
     this.plus = this.querySelector('.plus');
     this.button = this.querySelector('.js-add-to-cart');
     this.price = this.querySelector('.price');
+
     this.quanity = document.querySelector('.quanity');
   }
 

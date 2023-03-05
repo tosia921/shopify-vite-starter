@@ -13,6 +13,11 @@
     "lint": "run-p lint:style lint:formatting",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,scss,md}": "prettier --write"
