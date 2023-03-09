@@ -11,7 +11,7 @@
   min-height: 50px;
   font-size: 13px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: var(--white);
 
   span {

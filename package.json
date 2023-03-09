@@ -19,7 +19,6 @@
     }
   },
   "lint-staged": {
-    "*.{css, js, liquid, json}": "npm run build",
     "*.{js,css,md}": "prettier --write"
   },
   "keywords": [],
