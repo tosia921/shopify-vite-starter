@@ -50,7 +50,7 @@
   "src/styles/base/loading_spinner.css": {
     "file": "loading_spinner-8c04deb4.css",
     "isEntry": true,
-    "src": "src/styles/sections/loading_spinner.css"
+    "src": "src/styles/base/loading_spinner.css"
   },
   "src/styles/base/typography.css": {
     "file": "typography-04ecee03.css",
@@ -63,7 +63,7 @@
     "src": "src/styles/base/variables.css"
   },
   "src/styles/sections/cart.css": {
-    "file": "cart-fad5b9e9.css",
+    "file": "cart-d8651a88.css",
     "isEntry": true,
     "src": "src/styles/sections/cart.css"
   },
@@ -85,7 +85,7 @@
   "src/styles/sections/loading_spinner.css": {
     "file": "loading_spinner-8c04deb4.css",
     "isEntry": true,
-    "src": "src/styles/sections/loading_spinner.css"
+    "src": "src/styles/base/loading_spinner.css"
   },
   "src/styles/sections/product-card.css": {
     "file": "product-card-b058e010.css",

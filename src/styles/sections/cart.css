@@ -2,7 +2,7 @@
   h1 {
     display: flex;
     justify-content: center;
-    margin-bottom: 110px;
+    margin-bottom: 100px;
   }
   &__empty {
     display: flex;
