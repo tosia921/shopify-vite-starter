@@ -3,4 +3,12 @@ package.json
 package-lock.json
 README.md
 vite.config.js
+.husky
 src
+.eslintcache
+.eslintrc.js
+.gitignore
+.prettierignore
+.prettierrc
+postcss.config.js
+

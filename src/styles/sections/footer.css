@@ -14,6 +14,7 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       div,
       p {
         color: var(--white);

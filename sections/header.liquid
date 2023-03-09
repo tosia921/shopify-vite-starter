@@ -16,7 +16,7 @@
         {%- endfor %}
       </ul>
       <div class="cart-icon-parent">
-        <a href="{{routes.cart_url}}">
+        <a href="{{ routes.cart_url }}">
           {% render 'cart-icon' %}
 
           {% if cart.item_count > 0 %}
@@ -35,6 +35,6 @@
 </header>
 
 {% liquid
-      render 'vite-tag' with '@/styles/sections/header.scss'
+      render 'vite-tag' with '@/styles/sections/header.css'
       render 'vite-tag' with '@/js/header.js'
 %}

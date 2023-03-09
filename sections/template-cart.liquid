@@ -6,9 +6,9 @@
         <div class="cart-content">
           <div class="cart__items">
             {% for item in cart.items %}
-              <div class="item" data-itemid="{{item.key}}">
+              <div class="item" data-itemid="{{ item.key }}">
                 <div class="item__image">
-                  <img src="{{ item.image | image_url: width:100 }}" />
+                  <img src="{{ item.image | image_url: width: 100 }}" />
                 </div>
                 <div class="item__info">
                   <h2>{{ item.title }}</h2>
@@ -64,6 +64,6 @@
 </cart-page>
 
 {% liquid
-      render 'vite-tag' with '@/styles/sections/cart.scss'
+      render 'vite-tag' with '@/styles/sections/cart.css'
       render 'vite-tag' with '@/js/cart.js'
 %}

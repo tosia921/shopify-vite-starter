@@ -4,6 +4,10 @@
   overflow: hidden;
   background-color: black;
 
+  & input::placeholder {
+    color: red;
+  }
+
   &__wrapper {
     height: 100%;
     max-width: 1100px;
@@ -30,6 +34,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       span {
         font-size: 12px;
       }

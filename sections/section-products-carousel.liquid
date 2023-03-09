@@ -21,8 +21,8 @@
               {%- endif -%}
               </div>
               <div class="content">
-                <h6>{{item.title}}</h3>
-                <p>{{item.description | truncatewords: 15}}</p>
+                <h6>{{ item.title }}</h3>
+                <p>{{ item.description | truncatewords: 15 }}</p>
               </div>
               <add-to-cart>
                 <button class="button-primary button-carousel" type="submit"><span>ADD TO CART</span><div class="lds-ring"><div></div><div></div><div></div><div></div></div></button>
@@ -39,25 +39,25 @@
 </div>
 
 {% liquid
-      render 'vite-tag' with '@/styles/sections/product-carousel.scss'
+      render 'vite-tag' with '@/styles/sections/product-carousel.css'
       render 'vite-tag' with '@/js/productCarousel.js'
 %}
 
 {% schema %}
+{
+  "name": "products-carousel",
+  "tag": "section",
+  "settings": [
     {
-      "name": "products-carousel",
-      "tag": "section",
-      "settings": [
-        {
-          "type": "collection",
-          "id": "colllection_object",
-          "label": "Collection"
-        }
-      ],
-      "presets": [
-        {
-          "name": "Product Carousel"
-        }
-      ]
+      "type": "collection",
+      "id": "colllection_object",
+      "label": "Collection"
     }
+  ],
+  "presets": [
+    {
+      "name": "Product Carousel"
+    }
+  ]
+}
 {% endschema %}

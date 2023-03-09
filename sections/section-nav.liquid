@@ -14,46 +14,46 @@
 </div>
 
 {% liquid
-      render 'vite-tag' with '@/styles/sections/section-nav.scss'
+      render 'vite-tag' with '@/styles/sections/section-nav.css'
 %}
 
 {% schema %}
-  {
-    "name": "section-nav",
-    "tag": "section",
-    "class": "section",
-    "max_blocks": 3,
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Slideshow"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "section-nav-item",
-        "name": "Section Nav Item",
-        "limit": 3,
-        "settings": [
-          {
-            "type": "text",
-            "id": "block_title",
-            "label": "Item Title",
-            "default": "Example Title"
-          }, {
-            "type": "url",
-            "id": "block_url",
-            "label": "Link URL"
-
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Nav Section"
-      }
-    ]
-  }
+{
+  "name": "section-nav",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section-nav-item",
+      "name": "Section Nav Item",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Item Title",
+          "default": "Example Title"
+        },
+        {
+          "type": "url",
+          "id": "block_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Nav Section"
+    }
+  ]
+}
 {% endschema %}

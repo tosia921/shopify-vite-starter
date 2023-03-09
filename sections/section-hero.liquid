@@ -18,40 +18,42 @@
 </div>
 
 {% liquid
-      render 'vite-tag' with '@/styles/sections/hero-section.scss'
+      render 'vite-tag' with '@/styles/sections/hero-section.css'
 %}
 
 {% schema %}
-  {
-    "name": "page-hero",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "pretitle",
-        "label": " Pre Title",
-        "default": "NEW PRODUCT"
-      }, {
-        "type": "text",
-        "id": "title",
-        "label": "Title",
-        "default": "Product name example"
-      }, {
-        "type": "text",
-        "id": "description",
-        "label": "Description",
-        "default": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast."
-      }, {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Hero Image"
-
-      }
-    ],
-    "presets": [
-      {
-        "name": "Hero Section"
-      }
-    ]
-  }
+{
+  "name": "page-hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "pretitle",
+      "label": " Pre Title",
+      "default": "NEW PRODUCT"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Product name example"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}
 {% endschema %}

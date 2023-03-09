@@ -19,20 +19,20 @@
 </div>
 
 {% liquid
-      render 'vite-tag' with '@/styles/sections/template-collection.scss'
+      render 'vite-tag' with '@/styles/sections/template-collection.css'
 %}
 
 {% schema %}
-  {
-    "name": "Template Collection",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "number",
-        "id": "number_of_products_per_page",
-        "default": 6,
-        "label": "Number of products per page"
-      }
-    ]
-  }
+{
+  "name": "Template Collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "number_of_products_per_page",
+      "default": 6,
+      "label": "Number of products per page"
+    }
+  ]
+}
 {% endschema %}
