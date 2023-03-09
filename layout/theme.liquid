@@ -21,11 +21,11 @@
 
     {% liquid
       # Relative to sourceCodeDir
-      render 'vite-tag' with '@/styles/base/buttons.css'
-      render 'vite-tag' with '@/styles/base/global.css'
-      render 'vite-tag' with '@/styles/base/typography.css'
-      render 'vite-tag' with '@/styles/base/variables.css'
-      render 'vite-tag' with '@/styles/base/loading_spinner.css'
+      render 'vite-tag' with '/src/styles/base/buttons.css'
+      render 'vite-tag' with '/src/styles/base/global.css'
+      render 'vite-tag' with '/src/styles/base/typography.css'
+      render 'vite-tag' with '/src/styles/base/variables.css'
+      render 'vite-tag' with '/src/styles/base/loading_spinner.css'
     %}
 
     {%- if settings.favicon != blank -%}

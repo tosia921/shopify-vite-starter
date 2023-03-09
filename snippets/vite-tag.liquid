@@ -49,6 +49,4 @@
   {{ 'template-collection-f38430b2.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/src/styles/sections/template-product.css" or path == "styles/sections/template-product.css" %}
   {{ 'template-product-d7ddb529.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% else %}
-  {{ 'buttons-b9b6c8fc.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% endif %}
