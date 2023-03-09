@@ -19,6 +19,7 @@
     }
   },
   "lint-staged": {
+    "*.{css, js, liquid}": "vite build",
     "*.{js,css,md}": "prettier --write"
   },
   "keywords": [],
