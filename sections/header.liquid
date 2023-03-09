@@ -2,7 +2,6 @@
   <header-component>
     <div class="header__wrapper">
       <div class="header__logo">
-
         <div class="hamburger-button">
           {% render 'hamburger-icon' %}
         </div>
@@ -11,7 +10,7 @@
         </a>
       </div>
       <ul class="header-menu">
-        {% for link in linklists.main-menu.links -%}
+        {% for link in linklists['main-menu'].links -%}
           <li class="header-menu--item">{{ link.title | link_to: link.url }}</li>
         {%- endfor %}
       </ul>
@@ -24,7 +23,7 @@
               <span>{{ cart.item_count }}</span>
             </div>
           {% else %}
-          <div class="cart-icon-count">
+            <div class="cart-icon-count">
               <span>0</span>
             </div>
           {% endif %}
@@ -35,6 +34,6 @@
 </header>
 
 {% liquid
-      render 'vite-tag' with '/src/styles/sections/header.css'
-      render 'vite-tag' with '/src/js/header.js'
+  render 'vite-tag' with '/src/styles/sections/header.css'
+  render 'vite-tag' with '/src/js/header.js'
 %}

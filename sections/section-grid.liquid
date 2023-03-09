@@ -2,46 +2,46 @@
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'grid-item-large' %}
-      <div
-        class="grid-item-large"
-        style="background-color: {{ block.settings.grid-item-large--bc }};"
-        {{ block.shopify_attributes }}>
-        <h2>{{ block.settings.grid-item-large--title }}</h2>
-        <p>{{ block.settings.grid-item-large--description }}</p>
-        <a>
-          <div class="button-secondary black">{{ block.settings.grid-item-large--button }}</div>
-        </a>
-      </div>
-      {% when 'grid-item-medium' %}
-      <div
-        class="grid-item-medium"
-        style="background-color: {{ block.settings.grid-item-medium--bc }};"
-        {{ block.shopify_attributes }}>
-        <h2>{{ block.settings.grid-item-medium--title }}</h2>
-        <p>{{ block.settings.grid-item-medium--description }}</p>
-        <a>
-          <div class="button-secondary black">{{ block.settings.grid-item-medium--button }}</div>
-        </a>
-      </div>
-      {% when 'grid-two-col' %}
-      <div class="grid-two-col" {{ block.shopify_attributes }}>
-        <div class="grid-two-col--left" style="background-color: {{ block.settings.grid-two-col--bc }};"></div>
-        <div class="grid-two-col--right" style="background-color: {{ block.settings.grid-two-col--right--bc }};">
-          <h2>{{ block.settings.grid-two-col--title }}</h2>
-          <p>{{ block.settings.grid-two-col--description }}</p>
+        <div
+          class="grid-item-large"
+          style="background-color: {{ block.settings.grid-item-large--bc }};"
+          {{ block.shopify_attributes }}
+        >
+          <h2>{{ block.settings['grid-item-large--title'] }}</h2>
+          <p>{{ block.settings['grid-item-large--description'] }}</p>
           <a>
-            <div class="button-secondary black">{{ block.settings.grid-two-col--button }}</div>
+            <div class="button-secondary black">{{ block.settings['grid-item-large--button'] }}</div>
           </a>
         </div>
-
-      </div>
+      {% when 'grid-item-medium' %}
+        <div
+          class="grid-item-medium"
+          style="background-color: {{ block.settings.grid-item-medium--bc }};"
+          {{ block.shopify_attributes }}
+        >
+          <h2>{{ block.settings['grid-item-medium--title'] }}</h2>
+          <p>{{ block.settings['grid-item-medium--description'] }}</p>
+          <a>
+            <div class="button-secondary black">{{ block.settings['grid-item-medium--button'] }}</div>
+          </a>
+        </div>
+      {% when 'grid-two-col' %}
+        <div class="grid-two-col" {{ block.shopify_attributes }}>
+          <div class="grid-two-col--left" style="background-color: {{ block.settings.grid-two-col--bc }};"></div>
+          <div class="grid-two-col--right" style="background-color: {{ block.settings.grid-two-col--right--bc }};">
+            <h2>{{ block.settings['grid-two-col--title'] }}</h2>
+            <p>{{ block.settings['grid-two-col--description'] }}</p>
+            <a>
+              <div class="button-secondary black">{{ block.settings['grid-two-col--button'] }}</div>
+            </a>
+          </div>
+        </div>
     {% endcase %}
   {% endfor %}
-
 </div>
 
 {% liquid
-      render 'vite-tag' with '/src/styles/sections/section-grid.css'
+  render 'vite-tag' with '/src/styles/sections/section-grid.css'
 %}
 
 {% schema %}

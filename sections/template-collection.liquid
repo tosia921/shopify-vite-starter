@@ -1,5 +1,4 @@
 <div class="template-collection">
-
   {% paginate collection.products by section.settings.number_of_products_per_page %}
     <div class="template-collection__header">
       <div class="border-top"></div>
@@ -14,12 +13,12 @@
         {% endfor %}
       </div>
     </div>
-    {% render "pagination", pagination: paginate %}
+    {% render 'pagination', pagination: paginate %}
   {% endpaginate %}
 </div>
 
 {% liquid
-      render 'vite-tag' with '/src/styles/sections/template-collection.css'
+  render 'vite-tag' with '/src/styles/sections/template-collection.css'
 %}
 
 {% schema %}

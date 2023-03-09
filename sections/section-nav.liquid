@@ -1,20 +1,18 @@
 <div class="section-nav">
-
   {%- for block in section.blocks -%}
     {% case block.type %}
       {% when 'section-nav-item' %}
-      <div class="section-nav__item">
-        <h6>{{ block.settings.block_title }}</h6>
-        {% assign buttonUrl = block.settings.block_url %}
-        {% render 'button-arrow', text: 'SHOP', url: buttonUrl %}
-      </div>
+        <div class="section-nav__item">
+          <h6>{{ block.settings.block_title }}</h6>
+          {% assign buttonUrl = block.settings.block_url %}
+          {% render 'button-arrow', text: 'SHOP', url: buttonUrl %}
+        </div>
     {% endcase %}
   {% endfor %}
-
 </div>
 
 {% liquid
-      render 'vite-tag' with '/src/styles/sections/section-nav.css'
+  render 'vite-tag' with '/src/styles/sections/section-nav.css'
 %}
 
 {% schema %}

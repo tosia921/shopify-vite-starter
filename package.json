@@ -19,12 +19,13 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,css,liquid}": "prettier --write"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.0.6",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.15",
     "eslint": "^8.35.0",

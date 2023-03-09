@@ -8,7 +8,7 @@
             {% for item in cart.items %}
               <div class="item" data-itemid="{{ item.key }}">
                 <div class="item__image">
-                  <img src="{{ item.image | image_url: width: 100 }}" />
+                  <img src="{{ item.image | image_url: width: 100 }}">
                 </div>
                 <div class="item__info">
                   <h2>{{ item.title }}</h2>
@@ -21,7 +21,8 @@
                       type="text"
                       id="updates_{{ forloop.index }}"
                       value="{{ item.quantity }}"
-                      class="item_count_input">
+                      class="item_count_input"
+                    >
                     <button type="button" class="plus quanity">+</button>
                   </div>
                   <div>
@@ -47,23 +48,23 @@
               <button
                 class="button-primary"
                 type="submit"
-                name="checkout">CHECKOUT</button>
+                name="checkout"
+              >
+                CHECKOUT
+              </button>
             </div>
           </div>
-
         </div>
       {% else %}
         <div class="cart__empty">
           <h3>Your Cart is empty</h3>
         </div>
       {% endif %}
-
-
     </div>
   {% endform %}
 </cart-page>
 
 {% liquid
-      render 'vite-tag' with '/src/styles/sections/cart.css'
-      render 'vite-tag' with '/src/js/cart.js'
+  render 'vite-tag' with '/src/styles/sections/cart.css'
+  render 'vite-tag' with '/src/js/cart.js'
 %}
