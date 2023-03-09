@@ -15,10 +15,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "build && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
+    "*.{css, js, liquid, json}": "npm run build",
     "*.{js,css,md}": "prettier --write"
   },
   "keywords": [],
