@@ -3,4 +3,6 @@
 
 npm run build
 git add -A
+git reset -- assets/manifest.json
+git reset -- snippets/vite-tag.liquid
 npx lint-staged
