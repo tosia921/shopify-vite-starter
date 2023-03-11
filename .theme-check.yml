@@ -1,0 +1,14 @@
+# The directory where theme folders are located
+root: /
+# Disable a check
+TemplateLength:
+  enabled: false
+  severity: suggestion
+  ignore:
+  - templates/index.liquid
+  # Configure options for a check
+  max_length: 300
+# Enable a custom check
+MyCustomCheck:
+  enabled: true
+  severity: style

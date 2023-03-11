@@ -1,1 +1,0 @@
-class t extends HTMLElement{constructor(){super(),this.querySelector(".hamburger-button").addEventListener("click",this.toogleMenu)}toogleMenu(){console.log("click");const e=document.querySelector(".header-menu");console.log(e),e.classList.toggle("menu-active")}}customElements.define("header-component",t);
