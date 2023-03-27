@@ -6,6 +6,5 @@ git add -A
 git reset -- snippets/vite-tag.liquid
 git update-index --skip-worktree snippets/vite-tag.liquid
 cd assets
-find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && git ls-files -z ${pwd} | xargs -0 git update-index --skip-worktree" \;
-cd ..
+git update-index --assume-unchanged $(git ls-files | tr '\n' ' ')
 npx lint-staged
