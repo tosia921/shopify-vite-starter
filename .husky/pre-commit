@@ -3,8 +3,8 @@
 
 npm run build
 git add -A
+git reset -- assets/manifest.json
 git reset -- snippets/vite-tag.liquid
 git update-index --skip-worktree snippets/vite-tag.liquid
-cd assets
-git update-index --assume-unchanged $(git ls-files | tr '\n' ' ')
+git update-index --skip-worktree assets/manifest.json
 npx lint-staged
